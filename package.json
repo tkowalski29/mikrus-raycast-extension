@@ -14,15 +14,34 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Show List and Detail",
-      "description": "Template for showing a static list and a detail view",
+      "name": "server",
+      "title": "MikrUs - servers list",
+      "subtitle": "List servers",
+      "description": "Collection on servers",
       "mode": "view"
     }
   ],
-  "tools": null,
+  "preferences": [
+    {
+      "name": "apiKey",
+      "title": "API Key",
+      "description": "API key for communication",
+      "type": "textfield",
+      "required": true
+    },
+    {
+      "name": "defaultServer",
+      "title": "Default server id",
+      "description": "ID server",
+      "type": "textfield",
+      "required": true
+    }
+  ],
+  "tools": [],
   "dependencies": {
-    "@raycast/api": "^1.76.0"
+    "@raycast/api": "^1.76.0",
+    "@raycast/utils": "^1.16.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
