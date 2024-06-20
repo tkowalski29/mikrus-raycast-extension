@@ -1,3 +1,5 @@
 # Mikrus Changelog
 
-## [Initial Version] - 2024-06-19
+## [Version: 1.0.0] - 2024-06-20
+
+- initial communication with mikr.us servers
