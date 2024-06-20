@@ -37,7 +37,7 @@ export function useServer(): ServerHookType {
   }, [setData, data]);
 
   const update = useCallback(async (item: ServerType) => {
-    setData((prev: any) => {
+    setData((prev) => {
       return prev.map((v: ServerType) => {
         if (v.server_id === item.server_id) {
           return item;
@@ -99,7 +99,7 @@ async function apiServerLoadDetail(server: ServerType): Promise<ServerType> {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
+  .then(async (response) => response.json())
   .catch((err) => {
     console.log(err)
   });
@@ -108,7 +108,7 @@ async function apiServerLoadDetail(server: ServerType): Promise<ServerType> {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
+  .then(async (response) => response.json())
   .catch((err) => {
     console.log(err)
   });
@@ -117,7 +117,7 @@ async function apiServerLoadDetail(server: ServerType): Promise<ServerType> {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
+  .then(async (response) => response.json())
   .catch((err) => {
     console.log(err)
   });
@@ -126,7 +126,7 @@ async function apiServerLoadDetail(server: ServerType): Promise<ServerType> {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
+  .then(async (response) => response.json())
   .catch((err) => {
     console.log(err)
   });
@@ -147,7 +147,7 @@ async function apiServerLoadDetail(server: ServerType): Promise<ServerType> {
   return server
 }
 
-async function apiLoadCollection(setData: any, oldData: ServerType[]) {
+async function apiLoadCollection(setData, oldData: ServerType[]) {
   const formdata = new FormData();
   formdata.append("srv", GetDefaultServer());
   formdata.append("key", GetApiKey());
@@ -156,14 +156,14 @@ async function apiLoadCollection(setData: any, oldData: ServerType[]) {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
-  .then(async (res: any) => {
+  .then(async (response) => response.json())
+  .then(async (res) => {
     if (res.error) {
       console.log(res)
       return
     }
 
-    const newRes: ServerType[] = res.map((item: any) => {
+    const newRes: ServerType[] = res.map((item) => {
       const existing = oldData.find((x: ServerType) => x.server_id === item.server_id);
       return {
         ...item,
@@ -187,8 +187,8 @@ async function apiRestart(server: ServerType) {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
-  .then(async (res: any) => {
+  .then(async (response) => response.json())
+  .then(async (res) => {
     if (res.error) {
       console.log(res)
       return
@@ -208,8 +208,8 @@ async function apiAmfetamine(server: ServerType) {
     method: "POST",
     body: formdata,
   })
-  .then(async (response: any) => response.json())
-  .then(async (res: any) => {
+  .then(async (response) => response.json())
+  .then(async (res) => {
     if (res.error) {
       console.log(res)
       return
