@@ -8,6 +8,10 @@ Made with ♥ from Poland
 <img width=100 src="https://raw.githubusercontent.com/tkowalski29/mikrus-raycast-extension/main/assets/icon.png">
 </p>
 
+<a title="Install mikrus Raycast Extension" href="https://www.raycast.com/tkowalski29/mikrus">
+    <img src="https://www.raycast.com/tkowalski29/mikrus/install_button@2x.png?v=1.1" height="64" alt="" style="height: 64px;">
+</a>
+
 <h1 align="center">Mikr.us</h1>
 
 <h3 align="center">
